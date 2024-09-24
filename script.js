@@ -34,7 +34,7 @@ function inputCanvas() {
 };
 
 container.addEventListener('mouseover', (e) => {
-    e.target.style.backgroundColor = "black";
+    e.target.style.backgroundColor = `${picker.value}`;
 });
 
 initCanvas();
