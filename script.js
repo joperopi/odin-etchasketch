@@ -1,6 +1,7 @@
 const container = document.getElementById("container");
 const txtInput = document.getElementById("txtinput");
 const btnInput = document.getElementById("btninput");
+const picker = document.getElementById("picker")
 
 let canvasSize = 16;
 
