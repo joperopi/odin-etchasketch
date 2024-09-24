@@ -1,4 +1,6 @@
 const container = document.getElementById("container");
+const txtInput = document.getElementById("txtinput");
+const btnInput = document.getElementById("btninput");
 
 let canvasSize = 16;
 
