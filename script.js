@@ -1,6 +1,6 @@
 const container = document.getElementById("container");
 
-let canvasSize = 20;
+let canvasSize = 16;
 
 function initCanvas() {
     let canvasTotal = canvasSize ** 2;
