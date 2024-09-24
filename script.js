@@ -10,7 +10,7 @@ function initCanvas() {
         let div = document.createElement("div");
         div.style.width = `${pxSize}px`;
         div.style.height = `${pxSize}px`;
-        div.style.backgroundColor = `hsl(${i}, 100%, 50%)`;
+        div.style.backgroundColor = `hsl(${i}, 75%, 50%)`;
         container.appendChild(div);
     }
 }
