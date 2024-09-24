@@ -14,7 +14,7 @@ function initCanvas() {
         div.style.backgroundColor = "white";
         container.appendChild(div);
     }
-}
+};
 
 function inputCanvas() {
     let userInput = Number(txtInput.value);
@@ -30,7 +30,7 @@ function inputCanvas() {
         initCanvas();
         txtInput.value = "";
     }
-}
+};
 
 container.addEventListener('mouseover', (e) => {
     e.target.style.backgroundColor = "black";
