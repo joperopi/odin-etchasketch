@@ -16,4 +16,6 @@ body {
     width: 800px;
     height: 800px;
     background-color: lightblue;
+    display: flex;
+    flex-wrap: wrap;
 }
