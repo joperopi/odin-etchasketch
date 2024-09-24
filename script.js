@@ -15,4 +15,8 @@ function initCanvas() {
     }
 }
 
+container.addEventListener('mouseover', (e) => {
+    e.target.style.backgroundColor = "black";
+});
+
 initCanvas();
