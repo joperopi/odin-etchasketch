@@ -13,6 +13,20 @@ body {
     background-color: lightgray;
 }
 
+button,
+#txtinput {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font: 15px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+#txtinput {
+    width: 180px;
+}
+
 #container {
     width: 800px;
     height: 800px;
