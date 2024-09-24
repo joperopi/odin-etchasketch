@@ -18,12 +18,16 @@ function initCanvas() {
 };
 
 function inputCanvas() {
+    if (txtInput.value === "") {
+        alert("Please write something!");
+        return;
+    }
     let userInput = Number(txtInput.value);
     if (isNaN(userInput)) {
         alert("Please write a number!");
         txtInput.value = "";
     } else if (userInput < 8 || userInput > 100) {
-        alert("Please write a number between 2 and 100!");
+        alert("Please write a number between 8 and 100!");
         txtInput.value = "";
     } else {
         canvasSize = userInput;
