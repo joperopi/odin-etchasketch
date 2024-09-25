@@ -10,20 +10,28 @@
     <body>
         <h1>Etch-A-Sketch</h1>
         <p>Move your cursor around in the white square to draw something, or play around with the settings below!</p>
-        <div>
+        <div class="inputs">
             <input type="text" id="txtinput" placeholder="Number between 8 and 100">
             <button onclick="inputCanvas()">Create new canvas</button>
             <button onclick="clearCanvas()">Clear canvas</button>
         </div>
-        <div>
-            <input type="color" id="picker" name="picker" value="#000000">
-            <label for="picker">Color picker</label>
-            <input type="radio" id="option1" name="mode" value="default" checked>
-            <label for="option1">Default brush</label>
-            <input type="radio" id="option2" name="mode" value="random">
-            <label for="option2">Random brush</label>
-            <input type="radio" id="option3" name="mode" value="fade">
-            <label for="option3">Fade brush</label>
+        <div class="optionmenu">
+            <div class="option">
+                <input type="color" id="picker" name="picker" value="#000000">
+                <label for="picker">Color picker</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="option1" name="mode" value="default" checked>
+                <label for="option1">Default brush</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="option2" name="mode" value="random">
+                <label for="option2">Random brush</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="option3" name="mode" value="fade">
+                <label for="option3">Fade brush</label>
+            </div>
         </div>
         <div id="container"></div>
         <footer>
