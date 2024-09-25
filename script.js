@@ -44,7 +44,7 @@ function randomRGB() {
     let rgb3 = Math.floor(Math.random() * 255) + 1;
     let rgbVal = `rgb(${rgb1}, ${rgb2}, ${rgb3})`
     return rgbVal;
-}
+};
 
 container.addEventListener('mouseover', (e) => {
     let mode = document.querySelector("input[name=mode]:checked").value;
@@ -55,7 +55,7 @@ container.addEventListener('mouseover', (e) => {
         console.log(rgbVal);
         e.target.style.backgroundColor = rgbVal;
     } else {
-        
+        e.target.style.backgroundColor = `rgb(0, 0, 0, )`;
     }
 });
 
