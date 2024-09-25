@@ -4,7 +4,8 @@ const btnInput = document.getElementById("btninput");
 const picker = document.getElementById("picker")
 
 let canvasSize = 16;
-let opacity = 1;
+let opacity = 0;
+let opacityMode = "up";
 
 function initCanvas() {
     let canvasTotal = canvasSize ** 2;
@@ -46,16 +47,42 @@ function randomRGB() {
     return rgbVal;
 };
 
+function getOpacity() {
+    if (opacity === 0 && opacityMode === "down") {
+        let rgbaVal = `0.${opacity}`;
+        opacity++;
+        opacityMode = "up"
+        return rgbaVal;
+    }else if (opacity < 10) {
+
+        if (opacityMode === "up"){
+            let rgbaVal = `0.${opacity}`;
+            opacity++;
+            return rgbaVal;
+        }else {
+            let rgbaVal = `0.${opacity}`;
+            opacity--;
+            return rgbaVal;
+        }
+    }else if (opacity === 10) {
+        let rgbaVal = `1.0`;
+        opacityMode = "down";
+        opacity--;
+        return rgbaVal;
+    }
+    
+};
+
 container.addEventListener('mouseover', (e) => {
     let mode = document.querySelector("input[name=mode]:checked").value;
     if (mode === "default") {
         e.target.style.backgroundColor = `${picker.value}`;
     } else if (mode === "random") {
         let rgbVal = randomRGB();
-        console.log(rgbVal);
         e.target.style.backgroundColor = rgbVal;
     } else {
-        e.target.style.backgroundColor = `rgb(0, 0, 0, )`;
+        let rgbaVal = getOpacity();
+        e.target.style.backgroundColor = `rgb(0, 0, 0, ${rgbaVal})`;
     }
 });
 
