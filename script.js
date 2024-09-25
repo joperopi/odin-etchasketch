@@ -4,6 +4,7 @@ const btnInput = document.getElementById("btninput");
 const picker = document.getElementById("picker")
 
 let canvasSize = 16;
+let opacity = 1;
 
 function initCanvas() {
     let canvasTotal = canvasSize ** 2;
@@ -54,7 +55,7 @@ container.addEventListener('mouseover', (e) => {
         console.log(rgbVal);
         e.target.style.backgroundColor = rgbVal;
     } else {
-
+        
     }
 });
 
