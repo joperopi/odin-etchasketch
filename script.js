@@ -3,11 +3,11 @@ const txtInput = document.getElementById("txtinput");
 const btnInput = document.getElementById("btninput");
 const picker = document.getElementById("picker")
 
-let canvasSize = 16;
-let opacity = 0;
-let opacityMode = "up";
+let canvasSize = 16; // initial canvas size
+let opacity = 0; // initial opacity
+let opacityMode = "up"; // this is used by getOpacity to decide the opacity
 
-function initCanvas() {
+function initCanvas() { // creates canvas based on canvasSize and the fixed 800px size of the container
     let canvasTotal = canvasSize ** 2;
     let pxSize = 800 / canvasSize;
     for (let i = 0; i < canvasTotal; i++) {
@@ -19,7 +19,7 @@ function initCanvas() {
     }
 };
 
-function inputCanvas() {
+function inputCanvas() { // this checks if user input is valid and uses it to create a new canvas
     if (txtInput.value === "") {
         alert("Please write something!");
         return;
@@ -53,7 +53,7 @@ function randomRGB() {
     return rgbVal;
 };
 
-function getOpacity() {
+function getOpacity() { // this sets the opacity and chooses wether the next square should be more or less opaque
     if (opacity === 0 && opacityMode === "down") {
         let rgbaVal = `0.${opacity}`;
         opacity++;
@@ -79,7 +79,7 @@ function getOpacity() {
     
 };
 
-container.addEventListener('mouseover', (e) => {
+container.addEventListener('mouseover', (e) => { // this paints the canvas with the selected mode
     let mode = document.querySelector("input[name=mode]:checked").value;
     if (mode === "default") {
         e.target.style.backgroundColor = `${picker.value}`;
@@ -92,4 +92,4 @@ container.addEventListener('mouseover', (e) => {
     }
 });
 
-initCanvas();
+initCanvas(); //generate initial 16x16 canvas
