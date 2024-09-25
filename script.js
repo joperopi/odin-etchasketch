@@ -39,6 +39,12 @@ function inputCanvas() {
     }
 };
 
+function clearCanvas() {
+    for (const child of container.children) {
+        child.style.backgroundColor = "white";
+    }
+}
+
 function randomRGB() {
     let rgb1 = Math.floor(Math.random() * 255) + 1;
     let rgb2 = Math.floor(Math.random() * 255) + 1;
