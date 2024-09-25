@@ -37,8 +37,25 @@ function inputCanvas() {
     }
 };
 
+function randomRGB() {
+    let rgb1 = Math.floor(Math.random() * 255) + 1;
+    let rgb2 = Math.floor(Math.random() * 255) + 1;
+    let rgb3 = Math.floor(Math.random() * 255) + 1;
+    let rgbVal = `rgb(${rgb1}, ${rgb2}, ${rgb3})`
+    return rgbVal;
+}
+
 container.addEventListener('mouseover', (e) => {
-    e.target.style.backgroundColor = `${picker.value}`;
+    let mode = document.querySelector("input[name=mode]:checked").value;
+    if (mode === "default") {
+        e.target.style.backgroundColor = `${picker.value}`;
+    } else if (mode === "random") {
+        let rgbVal = randomRGB();
+        console.log(rgbVal);
+        e.target.style.backgroundColor = rgbVal;
+    } else {
+
+    }
 });
 
 initCanvas();
